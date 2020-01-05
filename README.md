@@ -1,6 +1,9 @@
 # Bookstore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This is an Angular demo application where I used angular firebase authentication and storage.
+Before any run/build process necessary firebase credentials have to be provided in the `src/environments/environment.ts` file.
+
+Project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
 
