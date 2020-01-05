@@ -1,0 +1,3 @@
+<app-book-container *ngIf="books$ | async as books" (addBook)="addBook()">
+  <app-book *ngFor="let book of books" [bookData]="book"></app-book>
+</app-book-container>

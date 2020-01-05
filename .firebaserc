@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bookstore-app-21369": {
+      "hosting": {
+        "bookstore": [
+          "bookstore-app-21369"
+        ]
+      }
+    }
+  }
+}

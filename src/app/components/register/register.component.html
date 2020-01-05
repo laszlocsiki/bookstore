@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+  <mat-form-field class="form-item">
+    <input matInput placeholder="Email address" [formControl]="form.get('email')" />
+    <mat-error matSuffix *ngIf="form.get('email').touched && form.get('email').invalid"> <mat-icon>error_outline</mat-icon> </mat-error>
+    <mat-error *ngIf="form.get('email').hasError('email') && !form.get('email').hasError('required')"> Email address is invalid </mat-error>
+    <mat-error *ngIf="form.get('email').hasError('required')">
+     Email address is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-item">
+    <input matInput type="password" placeholder="Password" [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
+    <mat-error matSuffix *ngIf="form.get('password').touched && form.get('password').invalid"> <mat-icon>error_outline</mat-icon> </mat-error>
+    <button
+      mat-icon-button
+      matSuffix
+      *ngIf="!form.get('password').touched || !form.get('password').invalid"
+      (click)="hidePassword = !hidePassword"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hidePassword"
+    >
+      <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+    <mat-error *ngIf="form.get('password').hasError('required')">
+      Password is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <div class="buttons">
+    <button [disabled]="!form.valid" mat-button color="primary" (click)="signUp()">Sign up</button>
+  </div>
+</form>

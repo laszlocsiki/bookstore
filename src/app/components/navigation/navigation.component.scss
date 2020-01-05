@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  flex-flow: row;
+  padding: 1rem .25rem;
+  background-color: #eaebed;
+
+  button {
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .align-right {
+    margin-left: auto;
+  }
+}

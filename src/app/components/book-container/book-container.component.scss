@@ -1,0 +1,10 @@
+.book-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  * {
+   margin: .25rem;
+  }
+}

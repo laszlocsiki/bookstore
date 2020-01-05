@@ -1,0 +1,24 @@
+<div class="authentication">
+  <div class="authentication__card">
+    <nav mat-tab-nav-bar class="navigation">
+      <a mat-tab-link
+         [routerLink]="'/authentication/login'"
+         routerLinkActive
+         #rla="routerLinkActive"
+         [active]="rla.isActive"
+      >
+        Login
+      </a>
+      <a mat-tab-link
+         [routerLink]="'/authentication/register'"
+         routerLinkActive
+         #rla2="routerLinkActive"
+         [active]="rla2.isActive">
+        Register
+      </a>
+    </nav>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

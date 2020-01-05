@@ -1,0 +1,12 @@
+<div class="navigation">
+  <button mat-button (click)="goTo('home')">HOME</button>
+  <ng-container *ngIf="isAuthenticated; else auth">
+    <button mat-button [matMenuTriggerFor]="userMenu" class="align-right">User</button>
+    <mat-menu #userMenu="matMenu" xPosition="after">
+      <button mat-menu-item (click)="logout.emit()">LOG OUT</button>
+    </mat-menu>
+  </ng-container>
+</div>
+<ng-template #auth>
+  <button mat-button class="align-right">Authentication</button>
+</ng-template>

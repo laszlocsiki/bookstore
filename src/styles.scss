@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem 0;
+  width: 100%;
+
+  .form-item {
+    margin: 1rem 0 0.1rem;
+    width: 100%;
+
+    ::ng-deep .mat-form-field-label {
+      text-align: center;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.fab {
+  position: fixed !important;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  top: auto;
+  height: 2.5rem;
+  width: 2.5rem;
+}

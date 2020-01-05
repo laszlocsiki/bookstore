@@ -1,0 +1,17 @@
+<div class="book">
+  <div class="book__image-container">
+    <img class="book__image" [src]="bookData.imageURL" alt="Image">
+  </div>
+
+  <svg class="book__svg" viewBox="0 0 800 500">
+
+    <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"/>
+    <path class="book__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+  </svg>
+
+  <div class="book__content">
+    <h3 class="book__title">{{bookData.title}}</h3>
+    <h4 class="book__author">{{bookData.author}}</h4>
+    <p>{{bookData.description}}</p>
+  </div>
+</div>
